@@ -11,16 +11,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/somevalidcontext")
-public class DepartureRest {
+public class FlightsRest {
 
     @Autowired
     private AvailableFlightsService availableFlightsService;
 
     @RequestMapping(path = "interconnections", method = RequestMethod.GET)
-    public List<AvailableFlightDTO> findAllInterconnections(@RequestParam("departure") String departure,
-                                                            @RequestParam("arrival") String arrival,
-                                                            @RequestParam("departureDateTime") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date departureDateTime,
-                                                            @RequestParam("arrivalDateTime") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date arrivalDateTime) {
+    public List<AvailableFlightDTO> findAllFlights(@RequestParam("departure") String departure,
+                                                   @RequestParam("arrival") String arrival,
+                                                   @RequestParam("departureDateTime") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date departureDateTime,
+                                                   @RequestParam("arrivalDateTime") @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") Date arrivalDateTime) {
 
         return availableFlightsService.findConnections(departure, arrival, departureDateTime, arrivalDateTime);
     }

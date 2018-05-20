@@ -8,8 +8,6 @@ import com.hfad.ryanairrecruitment.service.dto.schedule.FlightDTO;
 import com.hfad.ryanairrecruitment.service.dto.LegDTO;
 import com.hfad.ryanairrecruitment.service.dto.schedule.ScheduleDTO;
 import com.hfad.ryanairrecruitment.utils.DateConverter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
